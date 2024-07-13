@@ -1,0 +1,102 @@
+body {
+        font-family: Bauhaus 93, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        display: flex;
+        width: 80%;
+        border: 1px solid #cccccc;
+    }
+    
+    .left, .center, .right {
+        padding: 20px;
+    }
+    
+    .left {
+        width: 35%;
+        border-right: 1px solid #ccc;
+    }
+    
+    .center {
+        width: 40%;
+        border-right: 1px solid #ccc;
+        text-align: center;
+        background-color: #f2f2f2; 
+    }
+    
+    .right {
+        width: 35%;
+    }
+    
+    form label, #adminPanel label {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    form input {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    #seatingChart {
+        display: grid;
+        grid-template-columns: repeat(5);
+        gap: 10px;
+    }
+    
+    .seat {
+        width: 50px;
+        height: 50px;
+        background-color: #ccc;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .seat.selected {
+        background-color: rgb(0, 255, 0);
+    }
+    
+    .seat.reserved {
+        background-color: #c66;
+        cursor: not-allowed;
+    }
+    
+    .seat .tooltip {
+        visibility: hidden;
+        width: 100px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -50px;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+    
+    .seat:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+    .admin-interface {
+        display: none;
+        
+    }
+    
+    
